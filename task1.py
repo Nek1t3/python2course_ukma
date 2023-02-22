@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/weather', methods=['GET'])
 def get_weather():
     url = 'http://api.openweathermap.org/data/2.5/weather'
-    api_key = '96c9cdfd4ebba5f201652765b7290f2e'
+    api_key = 'myAPI'
     place = request.args.get('place')
     params = {'q': place, 'appid': api_key}
     response = requests.get(url, params=params)
